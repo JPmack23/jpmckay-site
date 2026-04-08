@@ -46,9 +46,9 @@ export default function Navbar() {
           ))}
           <a
             href="#connect"
-            className="text-sm px-5 py-2 rounded-full bg-accent-blue/10 text-accent-blue border border-accent-blue/20 hover:bg-accent-blue/20 transition-all duration-200"
+            className="text-xs px-4 py-1.5 rounded-full bg-accent-blue/10 text-accent-blue border border-accent-blue/20 hover:bg-accent-blue/20 transition-all duration-200"
           >
-            Get in Touch
+            Let's Talk
           </a>
         </div>
 
@@ -90,7 +90,7 @@ export default function Navbar() {
             onClick={() => setMobileOpen(false)}
             className="inline-block mt-2 text-sm px-5 py-2 rounded-full bg-accent-blue/10 text-accent-blue border border-accent-blue/20"
           >
-            Get in Touch
+            Let's Talk
           </a>
         </motion.div>
       )}
