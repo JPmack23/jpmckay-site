@@ -15,7 +15,7 @@ export default function Footer() {
           {/* Social */}
           <div className="flex items-center gap-4">
             <a
-              href="https://www.linkedin.com/in/jpmckay/"
+              href="https://www.linkedin.com/in/john-paul-mckay-59471319/"
               target="_blank"
               rel="noopener noreferrer"
               className="w-9 h-9 rounded-lg bg-white/[0.04] border border-white/[0.06] flex items-center justify-center text-gray-600 hover:text-white hover:border-white/10 transition-all"

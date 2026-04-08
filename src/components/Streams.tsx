@@ -40,7 +40,7 @@ const streams = [
     tagline: 'AI, Digital & Product Strategy',
     description:
       'Deep expertise in AI tools, digital product development, and project management — helping NZ businesses navigate the digital space and build smarter.',
-    url: 'https://rove.agency',
+    url: 'https://www.linkedin.com/in/john-paul-mckay-59471319/',
     gradient: 'from-purple-600/20 to-purple-800/5',
     border: 'hover:border-purple-500/30',
     accent: 'text-purple-400',
@@ -70,7 +70,7 @@ export default function Streams() {
             Three Businesses, One Mission
           </h2>
           <p className="mt-4 text-gray-400 text-lg max-w-2xl mx-auto">
-            Helping NZ organisations grow through smarter people strategy, practical BD, and the right use of technology.
+            Helping NZ organisations grow through smarter people strategy, practical business development, and the right use of technology.
           </p>
         </motion.div>
 

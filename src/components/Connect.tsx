@@ -3,7 +3,7 @@ import { motion } from 'framer-motion'
 const links = [
   {
     label: 'LinkedIn',
-    url: 'https://www.linkedin.com/in/jpmckay/',
+    url: 'https://www.linkedin.com/in/john-paul-mckay-59471319/',
     description: 'Connect and follow',
     color: 'group-hover:border-blue-500/30',
     icon: (
