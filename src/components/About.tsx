@@ -113,7 +113,7 @@ export default function About() {
             transition={{ duration: 0.6, delay: 0.15 }}
             className="lg:col-span-3"
           >
-            <p className="text-sm font-medium text-accent-blue uppercase tracking-widest mb-3">About</p>
+            <p className="text-sm font-medium text-accent-blue uppercase tracking-widest mb-3">About Me</p>
             <h2 className="text-3xl sm:text-4xl font-bold font-[family-name:var(--font-heading)] text-white tracking-tight mb-6">
               Business builder. Tech enthusiast.
               <br />
