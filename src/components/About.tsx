@@ -122,7 +122,7 @@ export default function About() {
 
             <div className="space-y-4 text-gray-400 leading-relaxed mb-10">
               <p>
-                My career started in New Zealand's Agriculture sector — CEO roles, boardrooms, cooperatives.
+                John-Paul (JP) McKay's career started in New Zealand's Agriculture sector — CEO roles, boardrooms, cooperatives.
                 But for the last decade, I've been deep in technology: building apps, launching platforms,
                 shipping digital products, and helping businesses grow.
               </p>
