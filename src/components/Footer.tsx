@@ -1,24 +1,31 @@
 export default function Footer() {
   return (
-    <footer className="border-t border-white/[0.04] py-10 px-6">
+    <footer className="border-t border-stone py-10 px-6">
       <div className="max-w-6xl mx-auto">
         <div className="flex flex-col sm:flex-row items-center justify-between gap-6">
-          {/* Logo */}
-          <div className="flex items-center gap-3">
-            <span className="text-lg font-bold font-[family-name:var(--font-heading)] text-white tracking-tight">
-              JPMcKay<span className="text-blue-500">.</span>
+          {/* Logo + location */}
+          <div className="flex items-center gap-3 flex-wrap justify-center sm:justify-start">
+            <span className="font-display font-semibold text-xl text-coral leading-none">
+              JP McKay<span className="text-coral">.</span>
             </span>
-            <span className="text-sm text-gray-600">|</span>
-            <span className="text-sm text-gray-600">Hamilton, New Zealand</span>
+            <span className="text-sm text-ink/30">·</span>
+            <span className="text-sm text-ink-soft">Hamilton, New Zealand</span>
+            <span className="text-sm text-ink/30">·</span>
+            <a
+              href="mailto:jp@rove.agency"
+              className="text-sm text-ink-soft hover:text-coral transition-colors"
+            >
+              jp@rove.agency
+            </a>
           </div>
 
           {/* Social */}
-          <div className="flex items-center gap-4">
+          <div className="flex items-center gap-3">
             <a
               href="https://www.linkedin.com/in/john-paul-mckay-59471319/"
               target="_blank"
               rel="noopener noreferrer"
-              className="w-9 h-9 rounded-lg bg-white/[0.04] border border-white/[0.06] flex items-center justify-center text-gray-600 hover:text-white hover:border-white/10 transition-all"
+              className="w-9 h-9 rounded-full bg-stone flex items-center justify-center text-ink-soft hover:bg-ink hover:text-cream transition-all"
               aria-label="LinkedIn"
             >
               <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
@@ -27,7 +34,7 @@ export default function Footer() {
             </a>
             <a
               href="mailto:jp@rove.agency"
-              className="w-9 h-9 rounded-lg bg-white/[0.04] border border-white/[0.06] flex items-center justify-center text-gray-600 hover:text-white hover:border-white/10 transition-all"
+              className="w-9 h-9 rounded-full bg-stone flex items-center justify-center text-ink-soft hover:bg-ink hover:text-cream transition-all"
               aria-label="Email"
             >
               <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -37,9 +44,9 @@ export default function Footer() {
           </div>
         </div>
 
-        <div className="mt-6 pt-6 border-t border-white/[0.03] text-center">
-          <p className="text-xs text-gray-700">
-            &copy; {new Date().getFullYear()} JP McKay. All rights reserved.
+        <div className="mt-8 pt-6 border-t border-stone/60 text-center">
+          <p className="text-xs text-ink-mute">
+            &copy; {new Date().getFullYear()} JP McKay · Built with a bias to action.
           </p>
         </div>
       </div>

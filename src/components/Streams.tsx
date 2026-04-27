@@ -1,132 +1,99 @@
-import { motion } from 'framer-motion'
-
-const streams = [
+const hats = [
   {
+    role: 'Day Job',
+    roleColor: 'bg-coral text-cream',
     name: '1Team',
-    tagline: 'Employee Benefits & Retention',
+    tagline: 'Keeping good people',
     description:
-      "NZ's employee benefits platform helping corporates and membership associations retain and engage their people through real, tangible perks.",
-    url: 'https://1team.org.nz',
-    gradient: 'from-blue-600/20 to-blue-800/5',
-    border: 'hover:border-blue-500/30',
-    accent: 'text-blue-400',
-    accentBg: 'bg-blue-500/10',
-    features: ['Corporate benefits platform', 'Membership associations', 'Staff retention strategy'],
-    icon: (
-      <svg className="w-7 h-7" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0z" />
-      </svg>
-    ),
+      'Business Manager at 1Team (CSC Buying Group). An employee benefits platform helping NZ employers retain their best people with real, tangible perks — not pizza Fridays.',
+    link: 'https://1team.org.nz',
+    linkLabel: '1team.org.nz',
   },
   {
+    role: 'Partnership',
+    roleColor: 'bg-mustard text-ink',
     name: 'LeadsBD',
-    tagline: 'Business Development Made Simple',
+    tagline: 'Winning better work',
     description:
-      'Helping professional service providers master BD through a supportive, structured facilitation programme. Build confidence, consistency, and real commercial outcomes — without it feeling like sales.',
-    url: 'https://leadsbd.co.nz',
-    gradient: 'from-amber-600/20 to-amber-800/5',
-    border: 'hover:border-amber-500/30',
-    accent: 'text-amber-400',
-    accentBg: 'bg-amber-500/10',
-    features: ['Facilitation programme & workshops', 'For service providers ready to grow', 'Data-driven BD strategy'],
-    icon: (
-      <svg className="w-7 h-7" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6" />
-      </svg>
-    ),
+      'Business Growth Partner in a BD coaching programme for professional service firms — ag-tech, tech services, lawyers, accountants. Structured ways to win more of the work you actually want.',
+    link: 'https://leadsbd.co.nz',
+    linkLabel: 'How we work',
   },
   {
+    role: 'My Studio',
+    roleColor: 'bg-ink text-cream',
     name: 'Rove Agency',
-    tagline: 'AI, Digital & Product Strategy',
+    tagline: 'Building with AI',
     description:
-      'Deep expertise in AI tools, digital product development, and project management — helping NZ businesses navigate the digital space and build smarter.',
-    url: 'https://www.linkedin.com/in/john-paul-mckay-59471319/',
-    gradient: 'from-purple-600/20 to-purple-800/5',
-    border: 'hover:border-purple-500/30',
-    accent: 'text-purple-400',
-    accentBg: 'bg-purple-500/10',
-    features: ['AI tools & automation', 'No-code & low-code builds', 'Digital project management'],
-    icon: (
-      <svg className="w-7 h-7" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9.75 3.104v5.714a2.25 2.25 0 01-.659 1.591L5 14.5M9.75 3.104c-.251.023-.501.05-.75.082m.75-.082a24.301 24.301 0 014.5 0m0 0v5.714c0 .597.237 1.17.659 1.591L19.8 15.3M14.25 3.104c.251.023.501.05.75.082M19.8 15.3l-1.57.393A9.065 9.065 0 0112 15a9.065 9.065 0 00-6.23.693L5 14.5m14.8.8l1.402 1.402c1.232 1.232.65 3.318-1.067 3.611A48.309 48.309 0 0112 21c-2.773 0-5.491-.235-8.135-.687-1.718-.293-2.3-2.379-1.067-3.61L5 14.5" />
-      </svg>
-    ),
+      'Where I do my own consulting and platform-build work. AI tools, digital products, custom builds — shipped by one non-developer using a modern AI stack with a bias to action.',
+    link: '#connect',
+    linkLabel: 'Recent builds',
   },
 ]
 
 export default function Streams() {
   return (
-    <section id="streams" className="py-24 sm:py-32 px-6">
-      <div className="max-w-6xl mx-auto">
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, margin: '-100px' }}
-          transition={{ duration: 0.6 }}
-          className="text-center mb-16"
-        >
-          <p className="text-sm font-medium text-accent-blue uppercase tracking-widest mb-3">What I Do</p>
-          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold font-[family-name:var(--font-heading)] text-white tracking-tight">
-            Three Businesses, One Mission
+    <section id="streams" className="relative py-24 md:py-32 border-t border-stone">
+      <div className="max-w-6xl mx-auto px-6">
+        {/* Header */}
+        <div className="grid md:grid-cols-[1.5fr_1fr] gap-10 md:gap-16 mb-16 md:mb-20 items-end">
+          <h2 className="font-display text-[36px] md:text-[52px] font-medium text-ink leading-[1.05] tracking-[-0.02em]">
+            One person,{' '}
+            <em className="italic text-coral font-medium">three hats.</em>
+            <br />
+            Different work,{' '}
+            <span className="text-ink-soft">same approach.</span>
           </h2>
-          <p className="mt-4 text-gray-400 text-lg max-w-2xl mx-auto">
-            Helping NZ organisations grow through smarter people strategy, practical business development, and the right use of technology.
-          </p>
-        </motion.div>
+          <div>
+            <p className="font-hand text-2xl text-ink-soft mb-3 rotate-[-1deg]">
+              not three businesses I founded —
+            </p>
+            <p className="text-ink-soft leading-[1.55]">
+              I'm one person who shows up differently depending on what the work needs. Grounded, practical, built for NZ.
+            </p>
+          </div>
+        </div>
 
-        <div className="grid md:grid-cols-3 gap-6">
-          {streams.map((stream, i) => (
-            <motion.a
-              key={stream.name}
-              href={stream.url}
-              target="_blank"
-              rel="noopener noreferrer"
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, margin: '-50px' }}
-              transition={{ duration: 0.5, delay: i * 0.15 }}
-              className={`group relative flex flex-col rounded-2xl bg-dark-card border border-white/[0.06] ${stream.border} transition-all duration-500 hover:-translate-y-2 overflow-hidden`}
+        {/* Three cards */}
+        <div className="grid md:grid-cols-3 gap-6 md:gap-8">
+          {hats.map((hat) => (
+            <div
+              key={hat.name}
+              className="group bg-cream border border-stone rounded-2xl p-8 md:p-9 hover:-translate-y-1 hover:shadow-lift transition-all duration-300 cursor-pointer relative overflow-hidden"
             >
-              {/* Gradient top strip */}
-              <div className={`h-1 w-full bg-gradient-to-r ${stream.gradient}`} />
+              {/* Role tag */}
+              <span
+                className={`inline-block text-[11px] font-bold uppercase tracking-[0.14em] px-3 py-1 rounded-md mb-6 ${hat.roleColor}`}
+              >
+                {hat.role}
+              </span>
 
-              {/* Hover glow */}
-              <div className={`absolute inset-0 bg-gradient-to-b ${stream.gradient} opacity-0 group-hover:opacity-100 transition-opacity duration-500`} />
+              {/* Name */}
+              <h3 className="font-display text-[30px] font-semibold text-ink leading-[1.1] tracking-[-0.01em] mb-2">
+                {hat.name}
+              </h3>
 
-              <div className="relative z-10 p-8 flex flex-col flex-1">
-                {/* Icon */}
-                <div className={`inline-flex items-center justify-center w-12 h-12 rounded-xl ${stream.accentBg} ${stream.accent} mb-5`}>
-                  {stream.icon}
-                </div>
+              {/* Tagline */}
+              <p className="italic text-ink-soft text-[15px] mb-5">
+                {hat.tagline}
+              </p>
 
-                {/* Title */}
-                <h3 className="text-xl font-bold text-white mb-1 font-[family-name:var(--font-heading)]">{stream.name}</h3>
-                <p className={`text-sm font-medium ${stream.accent} mb-4`}>{stream.tagline}</p>
+              {/* Description */}
+              <p className="text-[15px] text-ink-soft leading-[1.6] mb-7">
+                {hat.description}
+              </p>
 
-                {/* Description */}
-                <p className="text-gray-400 text-sm leading-relaxed mb-6">{stream.description}</p>
-
-                {/* Feature list */}
-                <ul className="mt-auto space-y-2 mb-6">
-                  {stream.features.map((feature) => (
-                    <li key={feature} className="flex items-center gap-2 text-sm text-gray-500">
-                      <svg className={`w-4 h-4 ${stream.accent} shrink-0`} fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                      </svg>
-                      {feature}
-                    </li>
-                  ))}
-                </ul>
-
-                {/* Link */}
-                <div className={`inline-flex items-center gap-2 text-sm font-medium ${stream.accent}`}>
-                  Visit site
-                  <svg className="w-4 h-4 transition-transform group-hover:translate-x-1.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
-                  </svg>
-                </div>
-              </div>
-            </motion.a>
+              {/* Link */}
+              <a
+                href={hat.link}
+                target={hat.link.startsWith('http') ? '_blank' : undefined}
+                rel={hat.link.startsWith('http') ? 'noopener noreferrer' : undefined}
+                className="inline-flex items-center gap-2 text-[14px] font-semibold text-coral group-hover:gap-3 transition-all duration-200"
+              >
+                {hat.linkLabel}
+                <span aria-hidden="true">→</span>
+              </a>
+            </div>
           ))}
         </div>
       </div>
