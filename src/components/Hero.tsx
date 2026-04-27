@@ -1,4 +1,4 @@
-import jpHero from '../assets/jp-hero.jpg'
+import jpHero from '../assets/jp-hero.png'
 
 export default function Hero() {
   return (
