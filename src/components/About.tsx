@@ -1,4 +1,4 @@
-import aboutPhoto from '../assets/jp-about.jpg'
+import aboutPhoto from '../assets/jp-about.png'
 
 export default function About() {
   return (
