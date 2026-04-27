@@ -4,7 +4,7 @@ export default function Hero() {
   return (
     <section className="relative pt-32 pb-24 md:pt-40 md:pb-32 overflow-hidden">
       <div className="max-w-6xl mx-auto px-6">
-        <div className="grid md:grid-cols-[1.25fr_1fr] gap-16 md:gap-20 items-center">
+        <div className="grid md:grid-cols-[1.25fr_1fr] gap-12 md:gap-16 items-center">
           {/* Left — copy */}
           <div>
             {/* Eyebrow */}
@@ -44,39 +44,62 @@ export default function Hero() {
             </div>
           </div>
 
-          {/* Right — photo */}
-          <div className="relative">
-            {/* Mustard burst behind photo */}
+          {/* Right — photo with mustard speech-bubble background */}
+          <div className="relative flex items-center justify-center">
+
+            {/* Mustard speech bubble background — large, behind the photo, with a tail pointing left toward the headline */}
+            <svg
+              viewBox="0 0 500 520"
+              className="absolute inset-0 w-full h-auto z-0"
+              preserveAspectRatio="xMidYMid meet"
+              aria-hidden="true"
+            >
+              {/* Main bubble (slightly off-circle for organic feel) */}
+              <ellipse
+                cx="260"
+                cy="260"
+                rx="220"
+                ry="230"
+                fill="#F5C451"
+              />
+              {/* Speech bubble tail — pointing toward bottom-left */}
+              <path
+                d="M 90 380 Q 50 420, 30 470 Q 90 440, 130 410 Z"
+                fill="#F5C451"
+              />
+            </svg>
+
+            {/* Sky quarter-arc accent — sits behind, peeks out top-right */}
             <div
-              className="absolute top-6 -left-4 w-[95%] h-[95%] rounded-full bg-mustard -z-0 hidden md:block"
+              className="absolute -top-2 -right-2 md:-right-6 w-32 h-32 rounded-full bg-sky -z-10 hidden md:block opacity-90"
               aria-hidden="true"
             ></div>
 
-            {/* Photo container */}
-            <div className="relative aspect-[4/5] rounded-2xl overflow-hidden bg-stone shadow-lift z-10">
+            {/* JP photo — circular, tight crop on face */}
+            <div className="relative z-10 w-[78%] aspect-square rounded-full overflow-hidden shadow-lift bg-stone">
               <img
                 src={jpHero}
                 alt="JP McKay"
-                className="w-full h-full object-cover"
+                className="w-full h-full object-cover scale-[1.6] origin-[50%_22%]"
               />
             </div>
 
-            {/* "that's me" handwritten note */}
+            {/* "that's me" handwritten note — top right, angled */}
             <div
-              className="absolute -top-2 -right-2 md:-right-6 z-20 font-hand font-semibold text-2xl md:text-3xl text-ink rotate-[-4deg]"
+              className="absolute top-2 right-0 md:right-4 z-20 font-hand font-semibold text-2xl md:text-3xl text-ink rotate-[-6deg] pointer-events-none"
               aria-hidden="true"
             >
               that's me
               <svg
-                className="absolute -bottom-6 right-2 w-12 h-8 text-ink"
-                viewBox="0 0 50 30"
+                className="absolute -bottom-7 right-3 w-14 h-10 text-ink"
+                viewBox="0 0 56 36"
                 fill="none"
                 xmlns="http://www.w3.org/2000/svg"
               >
                 <path
-                  d="M5 4 Q 22 14, 38 24 M 38 24 L 32 20 M 38 24 L 36 30"
+                  d="M6 4 Q 24 18, 42 30 M 42 30 L 35 26 M 42 30 L 39 36"
                   stroke="currentColor"
-                  strokeWidth="1.6"
+                  strokeWidth="1.8"
                   fill="none"
                   strokeLinecap="round"
                   strokeLinejoin="round"
@@ -84,11 +107,21 @@ export default function Hero() {
               </svg>
             </div>
 
-            {/* Sky quarter-arc decoration */}
-            <div
-              className="absolute -bottom-6 -right-6 w-28 h-28 rounded-full bg-sky -z-0 hidden md:block"
+            {/* Small coral squiggle accent — bottom left */}
+            <svg
+              className="absolute -bottom-2 -left-2 md:left-0 z-20 w-20 h-8 text-coral hidden md:block"
+              viewBox="0 0 80 30"
+              fill="none"
               aria-hidden="true"
-            ></div>
+            >
+              <path
+                d="M2 20 Q 15 5, 30 18 T 60 14 T 78 8"
+                stroke="currentColor"
+                strokeWidth="2.5"
+                fill="none"
+                strokeLinecap="round"
+              />
+            </svg>
           </div>
         </div>
       </div>

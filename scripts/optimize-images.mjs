@@ -13,6 +13,11 @@ const ASSETS = path.resolve(__dirname, '../src/assets')
 const targets = [
   { input: 'jp-hero.png', output: 'jp-hero.webp', maxWidth: 1600 },
   { input: 'jp-about.png', output: 'jp-about.webp', maxWidth: 1600 },
+  { input: 'jp-working.png', output: 'jp-working.webp', maxWidth: 1600 },
+  { input: 'jp-walking.png', output: 'jp-walking.webp', maxWidth: 1600 },
+  { input: 'jp-laugh.png', output: 'jp-laugh.webp', maxWidth: 1600 },
+  { input: 'jp-library.png', output: 'jp-library.webp', maxWidth: 1600 },
+  { input: 'jp-coaching.png', output: 'jp-coaching.webp', maxWidth: 1600 },
 ]
 
 const sizeKB = (p) => Math.round(fs.statSync(p).size / 1024)
